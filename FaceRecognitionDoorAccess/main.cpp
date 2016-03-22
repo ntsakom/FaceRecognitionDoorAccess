@@ -51,7 +51,7 @@ static void read_csv(const string& filename, vector<Mat>& images, vector<int>& l
 }
 //Global variables
 CascadeClassifier haar_cascade; //classifier for the task of Face Detection
-Ptr<FaceRecognizer> model = createFisherFaceRecognizer(); //Face recognition class to perform recognition
+Ptr<FaceRecognizer> model = createFisherFaceRecognizer(0,50); //Face recognition class to perform recognition
 
 int main(int argc, const char *argv[]) {
 	//Setup
@@ -131,13 +131,16 @@ void FaceRecognition() {
 			// face you have just found:
 			Mat face_resized;
 			cv::resize(face, face_resized, Size(50, 50), 1.0, 1.0, INTER_CUBIC);
-			//// Now perform the prediction, see how easy that is:
-			int prediction = model->predict(face_resized);
+
+			// Now perform the prediction
+			int predictionLabel = -1;
+			double confidence = 0.0;
+			model->predict(face_resized, predictionLabel, confidence);
 			//// And finally write all we've found out to the original image!
 			//// First of all draw a green rectangle around the detected face:
 			rectangle(original, face_i, CV_RGB(0, 255, 0), 1);
 			//// Create the text we will annotate the box with:
-			string box_text = format("Prediction = %d", prediction);
+			string box_text = format("Prediction = %d", predictionLabel);
 			//// Calculate the position for annotated text (make sure we don't
 			//// put illegal values in there):
 			int pos_x = std::max(face_i.tl().x - 10, 0);
