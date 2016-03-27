@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FaceRecognitionDoorAccess",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenCV2", "..\OpenCV2\OpenCV2\OpenCV2.vcxproj", "{09C2FF62-3174-460B-A6A5-535C4F605CB3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeechRecognition", "SpeechRecognition\SpeechRecognition.vcxproj", "{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{09C2FF62-3174-460B-A6A5-535C4F605CB3}.Release|x64.Build.0 = Release|x64
 		{09C2FF62-3174-460B-A6A5-535C4F605CB3}.Release|x86.ActiveCfg = Release|Win32
 		{09C2FF62-3174-460B-A6A5-535C4F605CB3}.Release|x86.Build.0 = Release|Win32
+		{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}.Debug|x64.ActiveCfg = Debug|x64
+		{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}.Debug|x64.Build.0 = Debug|x64
+		{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}.Debug|x86.ActiveCfg = Debug|Win32
+		{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}.Debug|x86.Build.0 = Debug|Win32
+		{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}.Release|x64.ActiveCfg = Release|x64
+		{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}.Release|x64.Build.0 = Release|x64
+		{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}.Release|x86.ActiveCfg = Release|Win32
+		{3D6FA3F6-1C30-487D-99B9-B3E0C9D4913D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
